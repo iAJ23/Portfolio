@@ -1,0 +1,214 @@
+:root {
+    --ink: #e9edf1;
+    --muted: #929da7;
+    --bg: #0d1118;
+    --panel: #151c25;
+    --line: #28313c;
+    --mono: "DM Mono", monospace;
+    --sans: "Manrope", sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px/1.7 var(--sans)
+}
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 76px 24px
+}
+
+.eyebrow,
+.option small,
+.preview span,
+.preview b,
+.note {
+    font: 9px var(--mono);
+    letter-spacing: .08em;
+    color: var(--muted)
+}
+
+h1 {
+    font-size: clamp(37px, 6vw, 57px);
+    line-height: 1.12;
+    letter-spacing: -.05em;
+    margin: 20px 0
+}
+
+h1 span {
+    color: #54f3d0
+}
+
+.intro {
+    max-width: 630px;
+    color: var(--muted);
+    margin: 0 0 33px
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+}
+
+.option {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 17px;
+    align-items: center;
+    padding: 13px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: transform .2s, border-color .2s
+}
+
+.option:hover {
+    transform: translateY(-4px);
+    border-color: #58697a
+}
+
+.preview {
+    height: 150px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 5px
+}
+
+.preview span,
+.preview b {
+    position: absolute;
+    top: 9px;
+    font-size: 7px
+}
+
+.preview span {
+    left: 9px
+}
+
+.preview b {
+    right: 9px
+}
+
+.preview i {
+    font-size: 52px;
+    font-style: normal
+}
+
+.cyber .preview {
+    background: radial-gradient(circle at 70% 35%, #51255e, #11192a 70%)
+}
+
+.cyber .preview i {
+    color: #50ffcb;
+    text-shadow: 0 0 20px #50ffcb
+}
+
+.cyber .preview span {
+    color: #ff5fa2
+}
+
+.rpg .preview {
+    background: linear-gradient(145deg, #443929, #182b2c)
+}
+
+.rpg .preview i {
+    color: #f4c874;
+    text-shadow: 0 0 20px #dfa849
+}
+
+.rpg .preview span {
+    color: #efd59c
+}
+
+.tactical .preview {
+    background: linear-gradient(145deg, #253b3a, #17231f)
+}
+
+.tactical .preview i {
+    color: #9bea69;
+    text-shadow: 0 0 20px #9bea69
+}
+
+.tactical .preview span {
+    color: #b8d5ab
+}
+
+.option small {
+    font-size: 7px
+}
+
+.option h2 {
+    font-size: 17px;
+    margin: 3px 0 5px
+}
+
+.option p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 10px
+}
+
+.option strong {
+    font-size: 10px;
+    color: #54f3d0
+}
+
+.rpg strong {
+    color: #e9be69
+}
+
+.tactical strong {
+    color: #9bea69
+}
+
+.note {
+    margin-top: 22px;
+    font-size: 8px
+}
+
+.note code {
+    color: var(--ink)
+}
+
+@media(max-width:650px) {
+    main {
+        padding: 54px 7vw
+    }
+
+    .options {
+        grid-template-columns: 1fr
+    }
+
+    .option {
+        grid-template-columns: 120px 1fr;
+        gap: 13px
+    }
+
+    .preview {
+        height: 130px
+    }
+
+    .option h2 {
+        font-size: 15px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *:before,
+    *:after {
+        transition: none !important
+    }
+}

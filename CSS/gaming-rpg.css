@@ -1,0 +1,508 @@
+:root {
+  --bg: #17140f;
+  --deep: #211b13;
+  --panel: #282117;
+  --line: #51432c;
+  --text: #efe5ce;
+  --muted: #b9ad96;
+  --gold: #e7bf70;
+  --gold2: #9e7b40;
+  --rust: #bd7656;
+  --mono: "DM Mono", monospace;
+  --serif: "Marcellus", serif;
+  --sans: "Manrope", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.8 var(--sans);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+header {
+  height: 68px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #17140fee;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 max(calc((100vw - 1080px) / 2), 5vw);
+  backdrop-filter: blur(10px);
+}
+.brand {
+  font: 9px var(--mono);
+  letter-spacing: 0.06em;
+}
+.brand span {
+  color: var(--gold);
+  font-size: 15px;
+  margin-right: 7px;
+}
+nav {
+  display: flex;
+  gap: 21px;
+}
+nav a,
+footer {
+  font: 8px var(--mono);
+  letter-spacing: 0.06em;
+  color: #c2b79e;
+}
+nav a:hover,
+footer a:hover {
+  color: var(--gold);
+}
+.hero {
+  min-height: 610px;
+  max-width: 1080px;
+  margin: auto;
+  padding: 78px 24px;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 80px;
+  align-items: center;
+  background: radial-gradient(ellipse at 36% 52%, #4d3b1b24, transparent 48%);
+}
+.eyebrow,
+.card-label,
+.class-name,
+.stat span,
+.section-label,
+.education b,
+.skill-list small,
+.quest-body small,
+.quest-body > b {
+  font-family: var(--mono);
+}
+.eyebrow,
+.section-label {
+  font-size: 8px;
+  letter-spacing: 0.11em;
+  color: var(--gold2);
+}
+.hero h1,
+.section h2,
+.contact h2 {
+  font: clamp(40px, 5.5vw, 64px)/1.12 var(--serif);
+  letter-spacing: -0.035em;
+  margin: 21px 0;
+}
+.hero h1 em,
+.section h2 em,
+.contact h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+.subtitle {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.subtitle span {
+  color: var(--rust);
+  margin: 0 5px;
+}
+.intro {
+  max-width: 480px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+.button {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  padding: 11px 15px;
+  border: 1px solid var(--gold2);
+  background: #e7bf7012;
+  color: var(--gold);
+  font: 8px var(--mono);
+  letter-spacing: 0.04em;
+}
+.button:hover {
+  background: var(--gold);
+  color: #211b13;
+}
+.text-link,
+.profile-link,
+.github {
+  font: 8px var(--mono);
+  color: #c5b89b;
+}
+.character {
+  position: relative;
+  text-align: center;
+  padding: 28px 23px;
+  border: 1px solid var(--gold2);
+  background: linear-gradient(145deg, #292216, #17140f);
+  box-shadow:
+    0 0 0 5px #e7bf7008,
+    0 25px 60px #0007;
+}
+.character:before,
+.character:after {
+  content: "✧";
+  position: absolute;
+  color: var(--gold);
+  font-size: 19px;
+}
+.character:before {
+  top: -11px;
+  left: -9px;
+}
+.character:after {
+  bottom: -11px;
+  right: -9px;
+}
+.crest {
+  margin: 0 auto 13px;
+  width: 83px;
+  height: 83px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font: 18px var(--serif);
+  box-shadow: 0 0 30px #e7bf7019;
+}
+.crest {
+  position: relative;
+}
+.crest:after {
+  content: "AO";
+  transform: rotate(-45deg);
+}
+.card-label {
+  margin: 26px 0 0;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  color: var(--gold2);
+}
+.character h2 {
+  font: 24px var(--serif);
+  margin: 5px 0;
+}
+.class-name {
+  font-size: 7px;
+  color: var(--rust);
+}
+.divider {
+  border-top: 1px solid var(--line);
+  margin: 18px 0;
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff0d;
+  padding: 8px 0;
+  font-size: 9px;
+}
+.stat span {
+  font-size: 7px;
+  color: #9c8b6e;
+}
+.stat b {
+  font-weight: 500;
+}
+.rune {
+  font-size: 18px;
+  color: var(--gold);
+  margin-top: 14px;
+}
+.section {
+  padding: 76px max(calc((100vw - 1000px) / 2), 7vw);
+  border-top: 1px solid var(--line);
+}
+.profile {
+  background: #1c1812;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  margin-top: 23px;
+}
+.section h2,
+.contact h2 {
+  font-size: clamp(36px, 4.6vw, 54px);
+  margin: 14px 0;
+}
+.split > div {
+  color: var(--muted);
+  font-size: 12px;
+}
+.split .lead {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 600;
+}
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 13px;
+  border-left: 1px solid var(--gold2);
+  background: #e7bf7008;
+  font-size: 9px;
+}
+.education b {
+  color: var(--gold);
+  font-size: 7px;
+}
+.skills {
+  background: #211b13;
+}
+.skills h2 {
+  margin: 16px 0 25px;
+}
+.skill-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.skill-list > div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  align-items: center;
+  padding: 13px;
+  border: 1px solid var(--line);
+  background: #17140f;
+}
+.rune-icon {
+  grid-row: span 2;
+  color: var(--gold);
+  font: 20px var(--serif);
+}
+.skill-list b {
+  font: 12px var(--serif);
+}
+.skill-list small {
+  font-size: 7px;
+  color: #a99a7f;
+}
+.quests {
+  background: #17140f;
+}
+.quest-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 17px 0 28px;
+}
+.quest-heading h2 {
+  margin: 0;
+}
+.quest-heading h2 em {
+  color: var(--rust);
+}
+.quest-heading > p {
+  font-size: 10px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.quest-list {
+  border-top: 1px solid var(--line);
+}
+.quest-list article {
+  display: grid;
+  grid-template-columns: 30px 56px 1fr 22px;
+  gap: 15px;
+  align-items: center;
+  padding: 17px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.quest-number {
+  font: 8px var(--mono);
+  color: var(--gold2);
+}
+.quest-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: #fff1;
+  color: var(--gold);
+  font: 18px var(--serif);
+}
+.icon-loop {
+  color: #e48ea7;
+}
+.icon-sport {
+  color: #78badd;
+}
+.icon-gym {
+  color: #9dd59a;
+  font: 9px var(--mono);
+}
+.icon-pet {
+  color: #eab971;
+}
+.quest-body small {
+  font-size: 7px;
+  color: var(--gold2);
+}
+.quest-body h3 {
+  font: 16px var(--serif);
+  margin: 2px 0;
+}
+.quest-body p {
+  font-size: 10px;
+  color: var(--muted);
+  margin: 2px 0 6px;
+}
+.quest-body > b {
+  font-size: 7px;
+  color: #b7a681;
+  font-weight: 400;
+}
+.reward {
+  color: var(--gold);
+}
+.contact {
+  padding: 70px max(calc((100vw - 1000px) / 2), 7vw);
+  border-top: 1px solid var(--line);
+  background: radial-gradient(ellipse at 75% 30%, #44331a, #1b1711 55%);
+}
+.contact h2 {
+  margin: 20px 0 10px;
+}
+.contact > p:not(.section-label) {
+  font-size: 11px;
+  color: var(--muted);
+}
+.profile-link,
+.github {
+  margin-left: 18px;
+}
+.profile-link:hover,
+.github:hover {
+  color: var(--gold);
+}
+footer {
+  min-height: 65px;
+  padding: 16px 6vw;
+  background: #100e0a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 7px;
+}
+@media (max-width: 760px) {
+  header {
+    padding: 0 4vw;
+  }
+  nav {
+    gap: 11px;
+  }
+  .hero {
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 60px 5vw;
+  }
+  .section,
+  .contact {
+    padding: 64px 6vw;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    height: 58px;
+  }
+  .brand {
+    font-size: 7px;
+  }
+  nav {
+    gap: 8px;
+  }
+  nav a {
+    font-size: 6px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 52px 7vw;
+    gap: 35px;
+  }
+  .hero h1 {
+    font-size: 47px;
+  }
+  .character {
+    max-width: 350px;
+    width: 100%;
+    align-self: center;
+  }
+  .split {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .section h2,
+  .contact h2 {
+    font-size: 38px;
+  }
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+  .quest-heading {
+    display: block;
+  }
+  .quest-heading > p {
+    margin-top: 10px;
+  }
+  .quest-list article {
+    grid-template-columns: 22px 43px 1fr 15px;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  .quest-icon {
+    width: 39px;
+    height: 39px;
+  }
+  .quest-body h3 {
+    font-size: 13px;
+  }
+  .contact .button {
+    margin-bottom: 13px;
+  }
+  .profile-link,
+  .github {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+  }
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+    text-align: center;
+  }
+  footer span {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

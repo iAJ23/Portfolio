@@ -1,117 +1,116 @@
 <!doctype html>
-<!-- Documento principal del portafolio. -->
 <html lang="es">
+
 <head>
-  <!-- Metadatos para idioma, vista móvil, descripción y título de la pestaña. -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10130f">
-  <meta name="description" content="Portafolio de Ángel Ochoa, desarrollador Java Full Stack Jr.">
-  <title>Ángel Ochoa | Desarrollador Java Full Stack Jr.</title>
-  <!-- Tipografías externas, Bootstrap y estilos propios del portafolio. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="./CSS/portfolio.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a2b">
+    <title>Ángel — Tablero de misiones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/pixel-gremio.css">
 </head>
-<body>
-  <!-- Navegación: marca, enlaces a secciones y menú colapsable en móvil. -->
-  <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" aria-label="Navegación principal">
-    <div class="container">
-      <a class="navbar-brand" href="#inicio"><span class="brand-mark">A</span> Ángel Ochoa<span class="brand-dot">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNav" aria-controls="portfolioNav" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="portfolioNav">
-        <div class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#sobre-mi">Sobre mí</a><a class="nav-link" href="#proyectos">Proyectos</a>
-          <a class="btn btn-nav ms-lg-2" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Contenido principal del portafolio. -->
-  <main>
-    <!-- Inicio / hero: presentación, rol, introducción y retrato. -->
-    <section class="hero-section" id="inicio">
-      <div class="container hero-inner">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-7">
-            <p class="eyebrow"><span class="availability-dot"></span> PORTAFOLIO · 2026</p>
-            <h1>Hola, soy<br><span class="accent-text">Ángel.</span></h1>
-            <p class="hero-role">Desarrollador <span>Java Full Stack Jr.</span></p>
-            <p class="hero-copy">La curiosidad impulsa mi aprendizaje; el deseo de crear algo útil le da sentido. Me enfoco en desarrollo Java Full Stack y busco crear software útil mientras crezco con cada línea de código.</p>
-            <div class="d-flex flex-wrap gap-3 hero-actions"><a class="btn btn-accent" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a><a class="btn btn-quiet" href="#sobre-mi">Conóceme mejor</a></div>
-            <div class="hero-meta"><span>JAVA</span><i></i><span>SPRING BOOT</span><i></i><span>WEB</span></div>
-          </div>
-          <div class="col-lg-5">
-            <div class="portrait-frame">
-              <div class="portrait-grid" aria-hidden="true"></div>
-              <img src="./images/nosotros/angel.png" alt="Retrato de Ángel Ochoa" class="portrait-img">
-              <div class="portrait-caption"><span class="caption-label">ENFOQUE ACTUAL</span><strong>Backend + buenas experiencias</strong></div>
-              <span class="portrait-index">01 / 04</span>
+<body class="pixel-world board-world">
+    <header><a class="brand" href="#inicio"><span class="tiny-shield">A</span> QUEST BOARD</a>
+        <nav><a href="#perfil">PLAYER 1</a><a href="#habilidades">SKILLS</a><a href="#proyectos">QUESTS</a><a
+                href="#contacto">JOIN</a></nav>
+    </header>
+    <main>
+        <section class="hero board-hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow">PRESS START · PORTFOLIO 2026</p>
+                <h1>Jugador uno:<br><em>Ángel.</em></h1>
+                <p class="role">JAVA FULL STACK JR. · PLAYER CLASS: BUILDER</p>
+                <p>Misiones de código, trabajo de equipo y soluciones que se quedan en el mundo real. ¿Quieres ver el
+                    registro?</p>
+                <div class="button-row"><a class="pixel-button gold-button" href="#proyectos"><span
+                            class="button-icon">▶</span> START QUEST <b>↘</b></a><a class="pixel-button blue-button"
+                        href="#contacto"><span class="button-icon">A</span> CONTACT</a></div>
+                <div class="quest-stats"><span>PLAYER <b>ANGEL-001</b></span><span>MODE <b>FULL STACK</b></span></div>
             </div>
-          </div>
-        </div>
-        <a href="#sobre-mi" class="scroll-cue" aria-label="Desplazarse a Sobre mí">DESLIZA <span>↓</span></a>
-      </div>
-    </section>
-
-    <!-- Sobre mí: perfil, formación y áreas de aprendizaje. -->
-    <section class="section about-section" id="sobre-mi">
-      <div class="container">
-        <div class="section-kicker">01 — SOBRE MÍ</div>
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-5"><h2>Curiosidad que<br><span class="accent-text">se convierte en código.</span></h2></div>
-          <div class="col-lg-7 about-copy">
-            <p class="lead-copy">Soy desarrollador Java Full Stack Jr. La curiosidad impulsa mi aprendizaje y el deseo de crear algo útil le da sentido. Mi objetivo es crear software útil y crecer con cada línea de código.</p>
-            <p>Me interesa aprender y construir soluciones que respondan a necesidades reales. Disfruto explorar tanto la lógica del backend como las herramientas del desarrollo web.</p>
-            <div class="row g-3 mt-4">
-              <div class="col-sm-6"><div class="info-card"><span class="info-icon">01</span><div><small>FORMACIÓN</small><strong>Formación en desarrollo Java Full Stack</strong></div></div></div>
-              <div class="col-sm-6"><div class="info-card"><span class="info-icon">02</span><div><small>APRENDIZAJE</small><strong>Java · desarrollo Full Stack</strong></div></div></div>
+            <div class="game-screen character-screen">
+                <div class="screen-top"><span>PLAYER PROFILE</span><span>ANGEL-001</span></div>
+                <div class="screen-avatar" role="img"
+                    aria-label="Retrato pixelado de Ángel, desarrollador Java Full Stack"><span class="pixel-spark"
+                        aria-hidden="true">✦</span>
+                    <div class="portrait-person" aria-hidden="true"><i class="portrait-hair"></i><i
+                            class="portrait-face"><b></b><em></em></i><i class="portrait-coat"></i><i
+                            class="portrait-cape"></i></div>
+                </div>
+                <div class="profile-controls">
+                    <div class="profile-control"><b class="player-name">ÁNGEL OCHOA</b><a
+                            href="#proyectos"><b>B</b><span>PROYECTOS</span></a></div>
+                    <div class="profile-control"><b class="player-role">JAVA FULL STACK</b><a
+                            href="#habilidades"><b>A</b><span>HABILIDADES</span></a></div>
+                </div>
             </div>
-            <p class="small-note">.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proyectos: tarjetas en una cuadrícula adaptable a cada pantalla. -->
-    <section class="section projects-section" id="proyectos">
-      <div class="container">
-        <div class="section-kicker">02 — TRABAJO SELECCIONADO</div>
-        <div class="d-flex flex-wrap justify-content-between align-items-end section-heading-row"><div><h2>Proyectos con<br><span class="accent-text">propósito.</span></h2></div><p class="section-intro">Una selección de proyectos personales y colaborativos.<br>Explora el proceso detrás de cada idea.</p></div>
-        <div class="row g-4 project-grid">
-          <!-- Tarjeta 1: proyecto colaborativo Loop. -->
-          <div class="col-md-6 col-lg-4"><article class="project-card h-100"><div class="project-visual visual-one"><span class="visual-label">01 / PLATAFORMA</span><div class="mock-window"><div class="mock-top"><b></b><b></b><b></b></div><div class="mock-content"><span class="mock-line wide"></span><span class="mock-line"></span><div class="mock-blocks"><i></i><i></i><i></i></div></div></div></div><div class="project-body"><div class="project-type">PROYECTO COLABORATIVO</div><h3>Loop</h3><p>Concepto de plataforma para conectar desarrolladores, compartir proyectos y crear oportunidades de colaboración.</p><div class="tech-list"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div></div></article></div>
-          <!-- Tarjeta 2: ejemplo de aplicación Java, editable. -->
-          <div class="col-md-6 col-lg-4"><article class="project-card h-100"><div class="project-visual visual-two"><span class="visual-label">02 / JAVA</span><div class="code-card"><span class="code-purple">public class</span> <span class="code-green">TaskManager</span> {<br>&nbsp;&nbsp;<span class="code-purple">List&lt;Task&gt;</span> tasks;<br>&nbsp;&nbsp;<span class="code-green">addTask</span>(task);<br>}</div></div><div class="project-body"><div class="project-type">APLICACIÓN WEB</div><h3>Gestor de tareas</h3><p>Aplicación para organizar tareas y prioridades, con una interfaz sencilla y una estructura preparada para crecer.</p><div class="tech-list"><span>Java</span><span>Spring Boot</span><span>SQL</span></div></div></article></div>
-          <!-- Tarjeta 3: ejemplo de API REST, editable. -->
-          <div class="col-md-6 col-lg-4"><article class="project-card h-100"><div class="project-visual visual-three"><span class="visual-label">03 / API</span><div class="api-card"><span class="api-method">GET</span><code>/api/catalog/products</code><span class="api-status">200 · OK</span><div class="api-bars"><i></i><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="project-type">SERVICIO BACKEND</div><h3>Catálogo API</h3><p>Diseño de una API REST para consultar y administrar productos, con endpoints claros y datos estructurados.</p><div class="tech-list"><span>Java</span><span>REST</span><span>MySQL</span></div></div></article></div>
-        </div>
-        <p class="small-note projects-note">Los proyectos 2 y 3 son ejemplos editables; reemplázalos por trabajos propios antes de publicar.</p>
-      </div>
-    </section>
-
-    <!-- Contacto: datos de muestra y formulario visual sin envío configurado. -->
-    <section class="section contact-section" id="contacto">
-      <div class="container">
-        <div class="section-kicker">03 — CONTACTO</div>
-        <div class="row g-5">
-          <div class="col-lg-5"><h2>¿Tienes una idea?<br><span class="accent-text">Hablemos.</span></h2><p class="contact-copy">Estoy abierto a colaborar, aprender y conversar sobre nuevos proyectos.</p><a class="email-link" href="mailto:hola@ejemplo.com">adj23@rocketmail.com <span aria-hidden="true">↗</span></a><p class="small-note">Cambia este correo por tu dirección de contacto.</p></div>
-          <div class="col-lg-7"><form class="contact-form"><div class="mb-4"><label for="name" class="form-label">Tu nombre</label><input class="form-control" id="name" name="nombre" type="text" placeholder="¿Cómo te llamas?" required></div><div class="mb-4"><label for="email" class="form-label">Correo electrónico</label><input class="form-control" id="email" name="correo" type="email" placeholder="tu@correo.com" required></div><div class="mb-4"><label for="message" class="form-label">Mensaje</label><textarea class="form-control" id="message" name="mensaje" rows="4" placeholder="Cuéntame un poco sobre tu idea..." required></textarea></div><button class="btn btn-accent" type="button">Enviar mensaje <span aria-hidden="true">↗</span></button><span class="form-note">Formulario de muestra · envío desactivado</span></form></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Pie de página: marca, crédito, año actualizado por JavaScript y enlace superior. -->
-  <footer class="site-footer"><div class="container d-flex flex-wrap justify-content-between align-items-center gap-3"><a class="navbar-brand" href="#inicio"><span class="brand-mark">A</span> Ángel<span class="brand-dot">.</span></a><p>Diseñado y construido con curiosidad. © <span id="year">2026</span> Ángel.</p><a href="#inicio" class="back-top">Volver arriba ↑</a></div></footer>
-  <!-- Bootstrap habilita el botón de navegación móvil; el script siguiente actualiza el año. -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        </section>
+        <section class="content" id="perfil">
+            <p class="eyebrow">01 / PLAYER PROFILE</p>
+            <h2>Experiencia y <em>habilidades.</em></h2>
+            <div class="copy-grid">
+                <p>Desarrollador Java Full Stack Jr. con experiencia en APIs REST, servicios web y aplicaciones de
+                    escritorio.</p>
+                <p>Me gusta construir con POO, arquitectura por capas y MVC. También cuento con experiencia en liderazgo
+                    de equipos y comunicación efectiva.</p>
+            </div>
+            <div class="pixel-tags"><span>GENERATION MÉXICO · BOOTCAMP JAVA</span><span>UNIVERSIDAD VERACRUZANA · LENGUA
+                    INGLESA</span><span>ENGLISH C1</span></div>
+        </section>
+        <section class="content skills" id="habilidades">
+            <p class="eyebrow">02 / CHARACTER SELECT</p>
+            <h2>Habilidades <em>equipadas.</em></h2>
+            <div class="skill-grid">
+                <div><i>J</i><b>JAVA</b><small>POO · CORE</small></div>
+                <div><i>S</i><b>SPRING BOOT</b><small>REST · HIBERNATE · MVC</small></div>
+                <div><i>Q</i><b>MYSQL</b><small>DATOS PERSISTENTES</small></div>
+                <div><i>W</i><b>WEB STACK</b><small>HTML · CSS · JS · NODE · POSTMAN · GIT</small></div>
+            </div>
+        </section>
+        <section class="content projects" id="proyectos">
+            <p class="eyebrow">03 / SELECT QUEST</p>
+            <h2>Misiones <em>disponibles.</em></h2>
+            <div class="project-grid">
+                <article>
+                    <div class="project-icon">01</div><small>TEAM QUEST</small>
+                    <h3>Loop</h3>
+                    <p>Plataforma con perfiles y publicaciones; colaboración en interfaz responsive y conexión con API
+                        REST.</p><b>JAVA · SPRING · BOOTSTRAP</b>
+                </article>
+                <article>
+                    <div class="project-icon">02</div><small>HACKATHON QUEST</small>
+                    <h3>GenSports</h3>
+                    <p>Landing deportiva, timer de oferta persistente y carrusel interactivo de cinco categorías.</p>
+                    <b>HTML · CSS · JAVASCRIPT</b>
+                </article>
+                <article>
+                    <div class="project-icon">03</div><small>ACADEMIC QUEST</small>
+                    <h3>Gestión de gimnasio</h3>
+                    <p>API REST para operaciones y clientes, con arquitectura por capas y pruebas con Postman.</p>
+                    <b>JAVA · SPRING BOOT</b>
+                </article>
+                <article>
+                    <div class="project-icon">04</div><small>ACADEMIC QUEST</small>
+                    <h3>Estética para mascotas</h3>
+                    <p>Aplicación de escritorio MVC con CRUD y persistencia de datos.</p><b>JAVA · MVC · SQL</b>
+                </article>
+            </div>
+        </section>
+        <section class="contact" id="contacto">
+            <p class="eyebrow">04 / PLAYER TWO?</p>
+            <h2>Press A para<br><em>contactar.</em></h2>
+            <div class="button-row"><a class="pixel-button gold-button" href="mailto:2angelochoa3@gmail.com"><span
+                        class="button-icon">A</span> SEND MESSAGE <b>↗</b></a><a class="pixel-button blue-button"
+                    href="https://www.linkedin.com/in/angel-j-ochoa-dev/" target="_blank"
+                    rel="noopener noreferrer"><span class="button-icon">B</span> LINKEDIN</a><a
+                    class="pixel-button blue-button" href="https://github.com/iAJ23" target="_blank"
+                    rel="noopener noreferrer"><span class="button-icon">G</span> GITHUB <b>↗</b></a></div>
+        </section>
+    </main>
+    <footer><span>QUEST BOARD · © 2026 · 1UP</span><a href="#inicio">TOP ↑</a></footer>
 </body>
+
 </html>
-
-
-
